@@ -34,3 +34,25 @@ Use this `REAMDE.md` file to describe your final project (as detailed on Canvas)
 ## Domain of Interest
 
 **Link to URL where data is from, and download the data into the project repo in a `data/` folder?**
+>All three data sources:
+>
+> 1. [Data 1](https://www.kaggle.com/danofer/india-census?select=india-districts-census-2011.csv)
+> 2. [Data 2](https://www.kaggle.com/danofer/india-census?select=hlpca-colnames.csv)
+> 3. [Data 3](https://www.kaggle.com/danofer/india-census?select=india_census_housing-hlpca-full.csv)
+
+**Description of how was the data collected or generated?**
+>For all three data sources:
+>
+> 1. [Scraper Source](https://github.com/nishusharma1608/India-Census-2011-Analysis), [Data source](http://censusindia.gov.in/2011-Common/CensusData2011.html)
+> 2. [Data Source](https://censusindia.gov.in/DigitalLibrary/MFTableSeries.aspx)
+> 3. [Scraper Source](https://github.com/pigshell/india-census-2011), [Data source](http://censusindia.gov.in/2011-Common/CensusData2011.html)
+
+**How many observations (rows) and features (columns) are in your data?**
+> 1. The number of rows is 640 and the number of columns is 118
+> 2. The number of rows is 85 and the number of columns is 48
+> 3. The number of rows is 1908 and the number of columns is 156
+
+**What questions (from above) can be answered using the data in this dataset?**
+> 1. In which areas is the male literacy rate (No. of literate male/ total no. of males) the highest?
+> 2. What is the proportion of Residence Houses in the total No. of houses in the census(Residence/Total No. of census houses)
+> 3. Which state has the highest percentage of rural area (No. of rural districts/total no. of districts)
