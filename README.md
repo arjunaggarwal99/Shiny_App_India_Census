@@ -40,7 +40,7 @@ For each identified data source,
 For all the 3 data sources,
 1. Scraper Source: [https://github.com/nishusharma1608/India-Census-2011-Analysis](https://github.com/nishusharma1608/India-Census-2011-Analysis)
 Data source: [http://censusindia.gov.in/2011-Common/CensusData2011.html](http://censusindia.gov.in/2011-Common/CensusData2011.html)
-2.[https://censusindia.gov.in/DigitalLibrary/MFTableSeries.aspx](https://censusindia.gov.in/DigitalLibrary/MFTableSeries.aspx)
+2. Data Source: [https://censusindia.gov.in/DigitalLibrary/MFTableSeries.aspx](https://censusindia.gov.in/DigitalLibrary/MFTableSeries.aspx)
 3. Scraper Source: [https://github.com/pigshell/india-census-2011](https://github.com/pigshell/india-census-2011)
 Data source: [http://censusindia.gov.in/2011-Common/CensusData2011.html](http://censusindia.gov.in/2011-Common/CensusData2011.html)
 
