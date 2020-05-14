@@ -17,8 +17,7 @@ Use this `REAMDE.md` file to describe your final project (as detailed on Canvas)
 > - Project Description: This project is done based on the Indian Census of 2001. This project is very detailed with respect to drawing inferences about the different female, male population in different Indian states. At the same time, it also talks about the income, schooling, and other identifiers about the population of the country which will help us to analyze the Indian census data in a holistic manner.
 
 *Project 2*
-> -
-[Project 2 Link](https://www.kaggle.com/rameshsinghds1986/analyzing-indian-census-2011)
+> - [Project 2 Link](https://www.kaggle.com/rameshsinghds1986/analyzing-indian-census-2011)
 > - Project Description: This project is about analyzing of the Indian census 2011 which is more recent than the census 2001. The special thing about the project is that they use a good combination of numerical and visual ways of analysis to draw inferences about the project. The numerical ways of analysis include mean, median, quartiles and visual ways of bar and line graphs to analyze the data in a more comprehensible manner. Overall, this project has more advance tools of data visualization and analysis.
 
 *Project 3*
