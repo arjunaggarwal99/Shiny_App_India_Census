@@ -38,9 +38,11 @@ For each identified data source,
 
 - Description of how was the data collected or generated (**1 point**)?
 For all the 3 data sources,
-Original census data released (and owned by) the [Registrar General and Census Commissioner of India under the Ministry of Home Affairs, Government of India.](https://censusindia.gov.in). It was gathered from 2 sources:
-[](https://github.com/pigshell/india-census-2011)
-[](https://github.com/nishusharma1608/India-Census-2011-Analysis)
+1. Scraper Source: [](https://github.com/nishusharma1608/India-Census-2011-Analysis)
+Data source: [](http://censusindia.gov.in/2011-Common/CensusData2011.html)
+2. 
+3. Scraper Source: [](https://github.com/pigshell/india-census-2011)
+Data source: [](http://censusindia.gov.in/2011-Common/CensusData2011.html)
 
 - How many observations (rows) and features (columns) are in your data(**1 point**)?
 The number of rows is 640 and the number of columns is 118
