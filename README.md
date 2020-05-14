@@ -45,7 +45,9 @@ Data source: [](http://censusindia.gov.in/2011-Common/CensusData2011.html)
 Data source: [](http://censusindia.gov.in/2011-Common/CensusData2011.html)
 
 - How many observations (rows) and features (columns) are in your data(**1 point**)?
-The number of rows is 640 and the number of columns is 118
+1. The number of rows is 640 and the number of columns is 118
+2. The number of rows is 85 and the number of columns is 48
+3. The number of rows is 1908 and the number of columns is 156
 
 - What questions (from above) can be answered using the data in this dataset(**1 point**)?
 1.  In which areas is the difference between the number of male and female workers the greatest
