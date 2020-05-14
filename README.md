@@ -38,11 +38,11 @@ For each identified data source,
 
 - Description of how was the data collected or generated (**1 point**)?
 For all the 3 data sources,
-1. Scraper Source: [](https://github.com/nishusharma1608/India-Census-2011-Analysis)
-Data source: [](http://censusindia.gov.in/2011-Common/CensusData2011.html)
-2. 
-3. Scraper Source: [](https://github.com/pigshell/india-census-2011)
-Data source: [](http://censusindia.gov.in/2011-Common/CensusData2011.html)
+1. Scraper Source: [https://github.com/nishusharma1608/India-Census-2011-Analysis](https://github.com/nishusharma1608/India-Census-2011-Analysis)
+Data source: [http://censusindia.gov.in/2011-Common/CensusData2011.html](http://censusindia.gov.in/2011-Common/CensusData2011.html)
+2.[https://censusindia.gov.in/DigitalLibrary/MFTableSeries.aspx](https://censusindia.gov.in/DigitalLibrary/MFTableSeries.aspx)
+3. Scraper Source: [https://github.com/pigshell/india-census-2011](https://github.com/pigshell/india-census-2011)
+Data source: [http://censusindia.gov.in/2011-Common/CensusData2011.html](http://censusindia.gov.in/2011-Common/CensusData2011.html)
 
 - How many observations (rows) and features (columns) are in your data(**1 point**)?
 1. The number of rows is 640 and the number of columns is 118
@@ -50,7 +50,7 @@ Data source: [](http://censusindia.gov.in/2011-Common/CensusData2011.html)
 3. The number of rows is 1908 and the number of columns is 156
 
 - What questions (from above) can be answered using the data in this dataset(**1 point**)?
-1.  In which areas is the difference between the number of male and female workers the greatest
-2. In which areas is the male literacy rate (No. of literate male/ total no. of males) the highest?
+1. In which areas is the male literacy rate (No. of literate male/ total no. of males) the highest?
+2. What is the proportion of Residence Houses in the total No. of houses in the census(Residence/Total No. of census houses)
 3. Which state has the highest percentage of rural area (No. of rural districts/total no. of districts)
 
