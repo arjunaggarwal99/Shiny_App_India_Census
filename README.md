@@ -4,7 +4,7 @@ Use this `REAMDE.md` file to describe your final project (as detailed on Canvas)
 ## Project Setup
 > Successfully created git repository and added all group members to the repo.
 >
-> We are using well formatted git markdown throughout this document
+> We are using well formatted git markdown throughout this document.
 
 ## Domain of Interest
 **1. Why are you interested in this field/domain?**
@@ -29,3 +29,25 @@ Use this `REAMDE.md` file to describe your final project (as detailed on Canvas)
 > - Differences between male and females characteristics throughout different states of India in terms of literacy, employment.
 >
 > - This question can be answered by finding the interstate and the intra state comparison of female:male literacy and employment comparison. This can be done using the bar graphs. We can also analyze this through the ratio of the literacy and employment ratio of females:men across different states in India.
+
+## Domain of Interest
+
+For each identified data source,
+- Link to URL where data is from, and download the data into the project repo in a `data/` folder (**1 point**)?
+1. https://www.kaggle.com/danofer/india-census?select=india-districts-census-2011.csv
+2. https://www.kaggle.com/danofer/india-census?select=hlpca-colnames.csv
+3. https://www.kaggle.com/danofer/india-census?select=india_census_housing-hlpca-full.csv
+
+- Description of how was the data collected or generated (**1 point**)?
+For all the 3 data sources,
+Original census data released (and owned by) the [Registrar General and Census Commissioner of India under the Ministry of Home Affairs, Government of India.](https://censusindia.gov.in). It was gathered from 2 sources:
+[](https://github.com/pigshell/india-census-2011)
+[](https://github.com/nishusharma1608/India-Census-2011-Analysis)
+
+- How many observations (rows) and features (columns) are in your data(**1 point**)?
+The number of rows is 640 and the number of columns is 118
+
+- What questions (from above) can be answered using the data in this dataset(**1 point**)?
+1.  In which areas is the difference between the number of male and female workers the greatest
+2. In which areas is the male literacy rate (No. of literate male/ total no. of males) the highest?
+3. Which state has the highest percentage of rural area (No. of rural districts/total no. of districts)
