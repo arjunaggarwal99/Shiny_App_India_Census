@@ -1,0 +1,81 @@
+---
+title: "India Census 2011 Report"
+#author: "Aditya, Arjun, Shubhangi"
+#date: "5/24/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+source("scripts/summary_information.R")
+# source(summary_table.R)
+# source(first_chart.R)
+# source(second_chart.R)
+# source(third_chart.R)
+```
+
+## Introductory paragraph
+> India has the second largest population in the world with a lot of diversity Considering that, the purpose of the project is to learn more about the population of the country and based on a multiple factors like population, literacy rate, male:female ratio, household status and so on. Along with this, there is a vibrant distribution of the population in the country based on various geographical, political, religious and socio-economic factors that affect the patterns of distribution and the type of people that live in the different regions of the country. This project will help us explain the diversity of the place.
+> The source of the data for the project is here: [Scraper Source](https://github.com/nishusharma1608/India-Census-2011-Analysis), [Data source](http://censusindia.gov.in/2011-Common/CensusData2011.html).
+
+## Summary Information
+> The total population of India is **`r total_pop`** people; the state with the maximum population is **`r state_max_pop`**. In the country, the male female ratio is **`r male_female_ratio` : 1** which clearly shows how there are more males than females in the country. Along with this, the city with the lowest literacy rate is **`r city_min_literate`**. Out of all the districts in the country, the district with the maximum number of households having computers without internet is **`r district_max_comp_without_inter`**.
+
+## Summary Table
+>  India has a very large rural population. At the same time, over the past two decades, there has been a strong waive of urbanisation wherein people are settling in the major metropolitan cities of the country or other urban areas. This summary table will help us anaylyse the state wise urban and rural households and will also tell us about the trends of population concentration based on the urban/rural areas throughout different states.
+>
+> Here is the summary table of the total, urban and rural households across different states in India.
+
+```{r summary table, echo = FALSE, warning = FALSE}
+#urban_rurul_household_summary <- summary_table
+#kable(urban_rurul_household_summary, col.names = c("State",
+#                                       "Total people killed in the State",
+#                                       "Total people injured in the State",
+#                                       "Total people harmed"))
+```
+
+> Interpretation from the summary table:
+>
+> 1. 
+> 2. 
+
+## Charts
+
+### Chart 1:
+
+> **Purpose of the ____:** *__* 
+
+```{r first chart, echo = FALSE, warning = FALSE}
+
+```
+
+> Interpretation from the ___:
+>
+> 1. 
+> 2. 
+
+### Chart 2: ___
+
+> **Purpose of the _____:** *__* 
+
+```{r second chart, echo = FALSE, warning = FALSE}
+
+```
+
+> Interpretation from the __: 
+>
+> 1. 
+> 2. 
+
+### Chart 3:
+
+> **Purpose of the _____:** *__* 
+
+```{r third chart, echo = FALSE, warning = FALSE}
+
+```
+
+> Interpretation from the summary table:
+>
+> 1. 
+> 2. 
