@@ -22,7 +22,7 @@ source("scripts/third_chart.R")
 > what do we do with that dat: understand the duynamics of the country more.
 
 ## Summary Information
-> The total population of India is **`r total_pop`** people; the state with the maximum population is **`r state_max_pop`**. In the country, the male female ratio is **`r male_female_ratio` : 1** which clearly shows how there are more males than females in the country. Along with this, the city with the lowest literacy rate is **`r city_min_literate`**. Out of all the districts in the country, the district with the maximum number of households having computers without internet is **`r district_max_comp_without_inter`**.
+> The total population of India is **`r total_pop`** people; the state with the maximum population is **`r state_max_pop`**. In the country, the male female ratio is **`r male_female_ratio` : 1** which clearly shows how there are more males than females in the country. Along with this, the city with the lowest literacy rate is **`r city_min_literate`**. Out of all the districts in the country, the district with the maximum number of households having computers without internet is **`r dist_max_comp_without_inter`**.
 
 ## Summary Table
 >  India has a very large rural population. At the same time, over the past two decades, there has been a strong waive of urbanisation wherein people are settling in the major metropolitan cities of the country or other urban areas. This summary table will help us anaylyse the state wise urban and rural households and will also tell us about the trends of population concentration based on the urban/rural areas throughout different states.
@@ -30,12 +30,7 @@ source("scripts/third_chart.R")
 > Here is the summary table of the total, urban and rural households across different states in India.
 
 ```{r summary table, echo = FALSE, warning = FALSE}
-urban_rurul_household_summary <- summary_table
-urban_rurul_household_summary
-#kable(urban_rurul_household_summary, col.names = c("State",
-#                                       "Total people killed in the State",
-#                                       "Total people injured in the State",
-#                                       "Total people harmed"))
+kable(summary_table)
 ```
 
 > Interpretation from the summary table:
@@ -76,7 +71,7 @@ pie
 > **Purpose of the double column chart:** *The purpose of this chart is the illustrate the literacy rate different between males and females throughout the different states of the country. We are also observing the general trend of literacy in the country across different states of India.* 
 
 ```{r column chart, echo = FALSE, warning = FALSE}
-plot_bar
+literacy_rate_plot
 ```
 
 > Interpretation from the column chart:

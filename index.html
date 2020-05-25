@@ -2247,7 +2247,7 @@ summary {
 <div id="introductory-paragraph" class="section level2">
 <h2>Introductory paragraph</h2>
 <blockquote>
-<p>India has the second largest population in the world with a lot of diversity Considering that, the purpose of the project is to learn more about the population of the country and based on a multiple factors like population, literacy rate, male:female ratio, household status and so on. Along with this, there is a vibrant distribution of the population in the country based on various geographical, political, religious and socio-economic factors that affect the patterns of distribution and the type of people that live in the different regions of the country. This project will help us explain the diversity of the place. The source of the data for the project is here: <a href="https://github.com/nishusharma1608/India-Census-2011-Analysis">Scraper Source</a>, <a href="http://censusindia.gov.in/2011-Common/CensusData2011.html">Data source</a>.</p>
+<p>India has the second largest population in the world with a lot of diversity considering that, the purpose of the project is to learn more about the population of the country and based on a multiple factors like population, literacy rate, male:female ratio, household status and so on. Along with this, there is a vibrant distribution of the population in the country based on various geographical, political, religious and socio-economic factors that affect the patterns of distribution and the type of people that live in the different regions of the country. This project will help us explain the diversity of the place. The source of the data for the project is here: <a href="https://github.com/nishusharma1608/India-Census-2011-Analysis">Scraper Source</a>, <a href="http://censusindia.gov.in/2011-Common/CensusData2011.html">Data source</a>. Why.. add.. how contributors are from India. what do we do with that dat: understand the duynamics of the country more.</p>
 </blockquote>
 </div>
 <div id="summary-information" class="section level2">
@@ -2262,21 +2262,264 @@ summary {
 <p>India has a very large rural population. At the same time, over the past two decades, there has been a strong waive of urbanisation wherein people are settling in the major metropolitan cities of the country or other urban areas. This summary table will help us anaylyse the state wise urban and rural households and will also tell us about the trends of population concentration based on the urban/rural areas throughout different states.</p>
 <p>Here is the summary table of the total, urban and rural households across different states in India.</p>
 </blockquote>
-<pre><code>## # A tibble: 35 x 5
-##    State.name `Total Populati… `No. of rural h… `No. of Urban H…
-##    &lt;fct&gt;                 &lt;int&gt;            &lt;int&gt;            &lt;int&gt;
-##  1 ANDAMAN A…           380581            89950            51725
-##  2 ANDHRA PR…         84580777         17174077          8420919
-##  3 ARUNACHAL…          1383727           270546           105414
-##  4 ASSAM              31205576          7588998          1485505
-##  5 BIHAR             104099452         20713342          2701332
-##  6 CHANDIGARH          1055450             8911           289456
-##  7 CHHATTISG…         25545198          5164079          1635610
-##  8 DADRA AND…           343709            48221            60562
-##  9 DAMAN AND…           243247            19794            70135
-## 10 GOA                 1458545           204479           372103
-## # … with 25 more rows, and 1 more variable: `Total number of
-## #   households` &lt;int&gt;</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">State.name</th>
+<th align="right">Total Population</th>
+<th align="right">No. of rural househols</th>
+<th align="right">No. of Urban Households</th>
+<th align="right">Total number of households</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">ANDAMAN AND NICOBAR ISLANDS</td>
+<td align="right">380581</td>
+<td align="right">89950</td>
+<td align="right">51725</td>
+<td align="right">141675</td>
+</tr>
+<tr class="even">
+<td align="left">ANDHRA PRADESH</td>
+<td align="right">84580777</td>
+<td align="right">17174077</td>
+<td align="right">8420919</td>
+<td align="right">25594996</td>
+</tr>
+<tr class="odd">
+<td align="left">ARUNACHAL PRADESH</td>
+<td align="right">1383727</td>
+<td align="right">270546</td>
+<td align="right">105414</td>
+<td align="right">375960</td>
+</tr>
+<tr class="even">
+<td align="left">ASSAM</td>
+<td align="right">31205576</td>
+<td align="right">7588998</td>
+<td align="right">1485505</td>
+<td align="right">9074503</td>
+</tr>
+<tr class="odd">
+<td align="left">BIHAR</td>
+<td align="right">104099452</td>
+<td align="right">20713342</td>
+<td align="right">2701332</td>
+<td align="right">23414674</td>
+</tr>
+<tr class="even">
+<td align="left">CHANDIGARH</td>
+<td align="right">1055450</td>
+<td align="right">8911</td>
+<td align="right">289456</td>
+<td align="right">298367</td>
+</tr>
+<tr class="odd">
+<td align="left">CHHATTISGARH</td>
+<td align="right">25545198</td>
+<td align="right">5164079</td>
+<td align="right">1635610</td>
+<td align="right">6799689</td>
+</tr>
+<tr class="even">
+<td align="left">DADRA AND NAGAR HAVELI</td>
+<td align="right">343709</td>
+<td align="right">48221</td>
+<td align="right">60562</td>
+<td align="right">108783</td>
+</tr>
+<tr class="odd">
+<td align="left">DAMAN AND DIU</td>
+<td align="right">243247</td>
+<td align="right">19794</td>
+<td align="right">70135</td>
+<td align="right">89929</td>
+</tr>
+<tr class="even">
+<td align="left">GOA</td>
+<td align="right">1458545</td>
+<td align="right">204479</td>
+<td align="right">372103</td>
+<td align="right">576582</td>
+</tr>
+<tr class="odd">
+<td align="left">GUJARAT</td>
+<td align="right">60439692</td>
+<td align="right">9293240</td>
+<td align="right">8230790</td>
+<td align="right">17524030</td>
+</tr>
+<tr class="even">
+<td align="left">HARYANA</td>
+<td align="right">25351462</td>
+<td align="right">4444365</td>
+<td align="right">2643643</td>
+<td align="right">7088008</td>
+</tr>
+<tr class="odd">
+<td align="left">HIMACHAL PRADESH</td>
+<td align="right">6864602</td>
+<td align="right">2612611</td>
+<td align="right">321052</td>
+<td align="right">2933663</td>
+</tr>
+<tr class="even">
+<td align="left">JAMMU AND KASHMIR</td>
+<td align="right">12541302</td>
+<td align="right">2663460</td>
+<td align="right">940172</td>
+<td align="right">3603632</td>
+</tr>
+<tr class="odd">
+<td align="left">JHARKHAND</td>
+<td align="right">32988134</td>
+<td align="right">5746528</td>
+<td align="right">2049505</td>
+<td align="right">7796033</td>
+</tr>
+<tr class="even">
+<td align="left">KARNATAKA</td>
+<td align="right">61095297</td>
+<td align="right">10620687</td>
+<td align="right">7378379</td>
+<td align="right">17999066</td>
+</tr>
+<tr class="odd">
+<td align="left">KERALA</td>
+<td align="right">33406061</td>
+<td align="right">5857785</td>
+<td align="right">5360068</td>
+<td align="right">11217853</td>
+</tr>
+<tr class="even">
+<td align="left">LAKSHADWEEP</td>
+<td align="right">64473</td>
+<td align="right">5289</td>
+<td align="right">15953</td>
+<td align="right">21242</td>
+</tr>
+<tr class="odd">
+<td align="left">MADHYA PRADESH</td>
+<td align="right">72626809</td>
+<td align="right">13453987</td>
+<td align="right">5044776</td>
+<td align="right">18498763</td>
+</tr>
+<tr class="even">
+<td align="left">MAHARASHTRA</td>
+<td align="right">112374333</td>
+<td align="right">17519193</td>
+<td align="right">16050569</td>
+<td align="right">33569762</td>
+</tr>
+<tr class="odd">
+<td align="left">MANIPUR</td>
+<td align="right">2855794</td>
+<td align="right">397837</td>
+<td align="right">212127</td>
+<td align="right">609964</td>
+</tr>
+<tr class="even">
+<td align="left">MEGHALAYA</td>
+<td align="right">2966889</td>
+<td align="right">553593</td>
+<td align="right">167874</td>
+<td align="right">721467</td>
+</tr>
+<tr class="odd">
+<td align="left">MIZORAM</td>
+<td align="right">1097206</td>
+<td align="right">123347</td>
+<td align="right">146084</td>
+<td align="right">269431</td>
+</tr>
+<tr class="even">
+<td align="left">NAGALAND</td>
+<td align="right">1978502</td>
+<td align="right">360385</td>
+<td align="right">174039</td>
+<td align="right">534424</td>
+</tr>
+<tr class="odd">
+<td align="left">NCT OF DELHI</td>
+<td align="right">16787941</td>
+<td align="right">124422</td>
+<td align="right">4481133</td>
+<td align="right">4605555</td>
+</tr>
+<tr class="even">
+<td align="left">ORISSA</td>
+<td align="right">41974218</td>
+<td align="right">10554975</td>
+<td align="right">2204158</td>
+<td align="right">12759133</td>
+</tr>
+<tr class="odd">
+<td align="left">PONDICHERRY</td>
+<td align="right">1247953</td>
+<td align="right">122914</td>
+<td align="right">265085</td>
+<td align="right">387999</td>
+</tr>
+<tr class="even">
+<td align="left">PUNJAB</td>
+<td align="right">27743338</td>
+<td align="right">4668757</td>
+<td align="right">3178690</td>
+<td align="right">7847447</td>
+</tr>
+<tr class="odd">
+<td align="left">RAJASTHAN</td>
+<td align="right">68548437</td>
+<td align="right">13296654</td>
+<td align="right">4774309</td>
+<td align="right">18070963</td>
+</tr>
+<tr class="even">
+<td align="left">SIKKIM</td>
+<td align="right">610577</td>
+<td align="right">115395</td>
+<td align="right">53627</td>
+<td align="right">169022</td>
+</tr>
+<tr class="odd">
+<td align="left">TAMIL NADU</td>
+<td align="right">72147030</td>
+<td align="right">11937264</td>
+<td align="right">11229457</td>
+<td align="right">23166721</td>
+</tr>
+<tr class="even">
+<td align="left">TRIPURA</td>
+<td align="right">3673917</td>
+<td align="right">748686</td>
+<td align="right">318177</td>
+<td align="right">1066863</td>
+</tr>
+<tr class="odd">
+<td align="left">UTTAR PRADESH</td>
+<td align="right">199812341</td>
+<td align="right">34726215</td>
+<td align="right">10446228</td>
+<td align="right">45172443</td>
+</tr>
+<tr class="even">
+<td align="left">UTTARAKHAND</td>
+<td align="right">10086292</td>
+<td align="right">2512569</td>
+<td align="right">870841</td>
+<td align="right">3383410</td>
+</tr>
+<tr class="odd">
+<td align="left">WEST BENGAL</td>
+<td align="right">91276115</td>
+<td align="right">16953359</td>
+<td align="right">8390356</td>
+<td align="right">25343715</td>
+</tr>
+</tbody>
+</table>
 <blockquote>
 <p>Interpretation from the summary table:</p>
 <ol style="list-style-type: decimal">
@@ -2305,8 +2548,8 @@ summary {
 <blockquote>
 <p><strong>Purpose of the pie chart:</strong> <em>Since religion is a considered a very important concept in India, this pie chart helps us understand the distribution of different religions on a country wide scale. This chart can also help understand many other usses and concerns related to the country which are based on religion.</em></p>
 </blockquote>
-<div id="htmlwidget-df9e95904e4d9d17f19d" style="width:672px;height:480px;" class="plotly html-widget"></div>
-<script type="application/json" data-for="htmlwidget-df9e95904e4d9d17f19d">{"x":{"visdat":{"890a57586a85":["function () ","plotlyVisDat"]},"cur_data":"890a57586a85","attrs":{"890a57586a85":{"labels":{},"values":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"pie"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"title":"India's religious percentages","xaxis":{"showgrid":false,"zeroline":false,"showticklabels":false},"yaxis":{"showgrid":false,"zeroline":false,"showticklabels":false},"hovermode":"closest","showlegend":true},"source":"A","config":{"showSendToCloud":false},"data":[{"labels":["Hindu","Muslim","Christian","Sikh","Buddhist","Jain","Other"],"values":[0.797995937873574,0.142250856850548,0.0229751609634751,0.0172052941068268,0.00697273592657496,0.00367653689711844,0.00655547869131813],"type":"pie","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(255,255,255,1)"}},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-e4b7a962003cbcc9a2e1" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e4b7a962003cbcc9a2e1">{"x":{"visdat":{"c65d6cd8e7e1":["function () ","plotlyVisDat"]},"cur_data":"c65d6cd8e7e1","attrs":{"c65d6cd8e7e1":{"labels":{},"values":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"pie"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"title":"India's religious percentages","xaxis":{"showgrid":false,"zeroline":false,"showticklabels":false},"yaxis":{"showgrid":false,"zeroline":false,"showticklabels":false},"hovermode":"closest","showlegend":true},"source":"A","config":{"showSendToCloud":false},"data":[{"labels":["Hindu","Muslim","Christian","Sikh","Buddhist","Jain","Other"],"values":[0.797995937873574,0.142250856850548,0.0229751609634751,0.0172052941068268,0.00697273592657496,0.00367653689711844,0.00655547869131813],"type":"pie","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(255,255,255,1)"}},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 <blockquote>
 <p>Interpretation from the pie chart:</p>
 <ol style="list-style-type: decimal">
@@ -2320,8 +2563,8 @@ summary {
 <blockquote>
 <p><strong>Purpose of the double column chart:</strong> <em>The purpose of this chart is the illustrate the literacy rate different between males and females throughout the different states of the country. We are also observing the general trend of literacy in the country across different states of India.</em></p>
 </blockquote>
-<div id="htmlwidget-af976ed4b2baeba70ac0" style="width:1200px;height:600px;" class="plotly html-widget"></div>
-<script type="application/json" data-for="htmlwidget-af976ed4b2baeba70ac0">{"x":{"visdat":{"890a6db96e8f":["function () ","plotlyVisDat"]},"cur_data":"890a6db96e8f","attrs":{"890a6db96e8f":{"x":{},"y":{},"name":"Number of male literates","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"},"890a6db96e8f.1":{"x":{},"y":{},"name":"Number of female literates","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar","inherit":true}},"layout":{"width":1200,"height":600,"margin":{"b":40,"l":60,"t":25,"r":10},"title":"Relationship between the literacy rates(males and females) and states","xaxis":{"domain":[0,1],"automargin":true,"title":"Name of state","type":"category","categoryorder":"array","categoryarray":["ANDAMAN AND NICOBAR ISLANDS","ANDHRA PRADESH","ARUNACHAL PRADESH","ASSAM","BIHAR","CHANDIGARH","CHHATTISGARH","DADRA AND NAGAR HAVELI","DAMAN AND DIU","GOA","GUJARAT","HARYANA","HIMACHAL PRADESH","JAMMU AND KASHMIR","JHARKHAND","KARNATAKA","KERALA","LAKSHADWEEP","MADHYA PRADESH","MAHARASHTRA","MANIPUR","MEGHALAYA","MIZORAM","NAGALAND","NCT OF DELHI","ORISSA","PONDICHERRY","PUNJAB","RAJASTHAN","SIKKIM","TAMIL NADU","TRIPURA","UTTAR PRADESH","UTTARAKHAND","WEST BENGAL"]},"yaxis":{"domain":[0,1],"automargin":true,"title":"No of male and female literates"},"barmode":"group","hovermode":"closest","showlegend":true},"source":"A","config":{"showSendToCloud":false},"data":[{"x":["ANDAMAN AND NICOBAR ISLANDS","ANDHRA PRADESH","ARUNACHAL PRADESH","ASSAM","BIHAR","CHANDIGARH","CHHATTISGARH","DADRA AND NAGAR HAVELI","DAMAN AND DIU","GOA","GUJARAT","HARYANA","HIMACHAL PRADESH","JAMMU AND KASHMIR","JHARKHAND","KARNATAKA","KERALA","LAKSHADWEEP","MADHYA PRADESH","MAHARASHTRA","MANIPUR","MEGHALAYA","MIZORAM","NAGALAND","NCT OF DELHI","ORISSA","PONDICHERRY","PUNJAB","RAJASTHAN","SIKKIM","TAMIL NADU","TRIPURA","UTTAR PRADESH","UTTARAKHAND","WEST BENGAL"],"y":[164377,28251243,439868,10568639,31608023,465346,8807893,142521,124643,615823,23474873,9794067,2752590,4264671,10882519,22508471,13704903,28023,25174328,45257584,1039858,913879,438529,723957,7194856,15089681,497378,10436056,23688412,251269,28040491,1501369,68234964,3863708,33818810],"name":"Number of male literates","type":"bar","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["ANDAMAN AND NICOBAR ISLANDS","ANDHRA PRADESH","ARUNACHAL PRADESH","ASSAM","BIHAR","CHANDIGARH","CHHATTISGARH","DADRA AND NAGAR HAVELI","DAMAN AND DIU","GOA","GUJARAT","HARYANA","HIMACHAL PRADESH","JAMMU AND KASHMIR","JHARKHAND","KARNATAKA","KERALA","LAKSHADWEEP","MADHYA PRADESH","MAHARASHTRA","MANIPUR","MEGHALAYA","MIZORAM","NAGALAND","NCT OF DELHI","ORISSA","PONDICHERRY","PUNJAB","RAJASTHAN","SIKKIM","TAMIL NADU","TRIPURA","UTTAR PRADESH","UTTARAKHAND","WEST BENGAL"],"y":[129904,22305517,326137,8609338,20896530,340092,6572029,80709,63763,549664,17618485,6804921,2287146,2802562,7445550,18138851,14430921,24530,17676841,36296706,868618,871126,409646,618477,5542911,11652914,459931,8271081,14586870,193683,23797016,1303414,46162591,3017245,27719471],"name":"Number of female literates","type":"bar","marker":{"color":"rgba(255,127,14,1)","line":{"color":"rgba(255,127,14,1)"}},"error_y":{"color":"rgba(255,127,14,1)"},"error_x":{"color":"rgba(255,127,14,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-1708a5e13a8855fad6de" style="width:1200px;height:600px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1708a5e13a8855fad6de">{"x":{"visdat":{"c65d145f9c9b":["function () ","plotlyVisDat"]},"cur_data":"c65d145f9c9b","attrs":{"c65d145f9c9b":{"x":{},"y":{},"name":"Number of male literates","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"},"c65d145f9c9b.1":{"x":{},"y":{},"name":"Number of female literates","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar","inherit":true}},"layout":{"width":1200,"height":600,"margin":{"b":40,"l":60,"t":25,"r":10},"title":"Relationship between the literacy<br />         rates(males and females) in different states","xaxis":{"domain":[0,1],"automargin":true,"title":"Name of state","type":"category","categoryorder":"array","categoryarray":["ANDAMAN AND NICOBAR ISLANDS","ANDHRA PRADESH","ARUNACHAL PRADESH","ASSAM","BIHAR","CHANDIGARH","CHHATTISGARH","DADRA AND NAGAR HAVELI","DAMAN AND DIU","GOA","GUJARAT","HARYANA","HIMACHAL PRADESH","JAMMU AND KASHMIR","JHARKHAND","KARNATAKA","KERALA","LAKSHADWEEP","MADHYA PRADESH","MAHARASHTRA","MANIPUR","MEGHALAYA","MIZORAM","NAGALAND","NCT OF DELHI","ORISSA","PONDICHERRY","PUNJAB","RAJASTHAN","SIKKIM","TAMIL NADU","TRIPURA","UTTAR PRADESH","UTTARAKHAND","WEST BENGAL"]},"yaxis":{"domain":[0,1],"automargin":true,"title":"Number of literates"},"barmode":"group","hovermode":"closest","showlegend":true},"source":"A","config":{"showSendToCloud":false},"data":[{"x":["ANDAMAN AND NICOBAR ISLANDS","ANDHRA PRADESH","ARUNACHAL PRADESH","ASSAM","BIHAR","CHANDIGARH","CHHATTISGARH","DADRA AND NAGAR HAVELI","DAMAN AND DIU","GOA","GUJARAT","HARYANA","HIMACHAL PRADESH","JAMMU AND KASHMIR","JHARKHAND","KARNATAKA","KERALA","LAKSHADWEEP","MADHYA PRADESH","MAHARASHTRA","MANIPUR","MEGHALAYA","MIZORAM","NAGALAND","NCT OF DELHI","ORISSA","PONDICHERRY","PUNJAB","RAJASTHAN","SIKKIM","TAMIL NADU","TRIPURA","UTTAR PRADESH","UTTARAKHAND","WEST BENGAL"],"y":[164377,28251243,439868,10568639,31608023,465346,8807893,142521,124643,615823,23474873,9794067,2752590,4264671,10882519,22508471,13704903,28023,25174328,45257584,1039858,913879,438529,723957,7194856,15089681,497378,10436056,23688412,251269,28040491,1501369,68234964,3863708,33818810],"name":"Number of male literates","type":"bar","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["ANDAMAN AND NICOBAR ISLANDS","ANDHRA PRADESH","ARUNACHAL PRADESH","ASSAM","BIHAR","CHANDIGARH","CHHATTISGARH","DADRA AND NAGAR HAVELI","DAMAN AND DIU","GOA","GUJARAT","HARYANA","HIMACHAL PRADESH","JAMMU AND KASHMIR","JHARKHAND","KARNATAKA","KERALA","LAKSHADWEEP","MADHYA PRADESH","MAHARASHTRA","MANIPUR","MEGHALAYA","MIZORAM","NAGALAND","NCT OF DELHI","ORISSA","PONDICHERRY","PUNJAB","RAJASTHAN","SIKKIM","TAMIL NADU","TRIPURA","UTTAR PRADESH","UTTARAKHAND","WEST BENGAL"],"y":[129904,22305517,326137,8609338,20896530,340092,6572029,80709,63763,549664,17618485,6804921,2287146,2802562,7445550,18138851,14430921,24530,17676841,36296706,868618,871126,409646,618477,5542911,11652914,459931,8271081,14586870,193683,23797016,1303414,46162591,3017245,27719471],"name":"Number of female literates","type":"bar","marker":{"color":"rgba(255,127,14,1)","line":{"color":"rgba(255,127,14,1)"}},"error_y":{"color":"rgba(255,127,14,1)"},"error_x":{"color":"rgba(255,127,14,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 <blockquote>
 <p>Interpretation from the column chart:</p>
 <ol style="list-style-type: decimal">
