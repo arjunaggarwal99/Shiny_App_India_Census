@@ -1,18 +1,21 @@
+#This code aims to draw the relation between the population
+#(male and female) and the districts in New Delhi.The relation is
+#depicted via a scatter plot
+
 library("dplyr")
-library("ggplot2")
-library("leaflet")
 library("plotly")
 
+#Reading the dataset file
+india_census_df <- read.csv(file = "data/india-districts-census-2011.csv")
 
-census_file <- read.csv(file="data/india-districts-census-2011.csv")
-temp2 <- census_file %>%
-  filter(State.name=="NCT OF DELHI")
+#Grouping all the districts of New Delhi
+districts_of_delhi <- india_census_df %>%
+  filter(State.name == "NCT OF DELHI")
 
-Scatter.1 = ggplot(data = temp2, aes(x = District.name, y = Male))+
-  geom_point()
-Scatter.1
+#Drawing the plot for males
+male_plot <- ggplot(data = temp2, aes(x = District.name, y = Male)) +
+            geom_point()
 
-
-Scatter.2 = ggplot(data = temp2, aes(x = District.name, y = Female))+
-  geom_point()
-Scatter.2
+#Drawing the plot for females
+female_plot <- ggplot(data = temp2, aes(x = District.name, y = Female)) +
+               geom_point()
