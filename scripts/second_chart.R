@@ -3,9 +3,11 @@
 # in India
 
 # Takes the data set from the read command in our summary table file
-source("summary_table.R")
+source("scripts/summary_table.R")
 
-religion_table <- census_df %>%
+# Creating a table based on different religions in India
+# and the proportion of people believing in those religions.
+religion_table <- india_census_df %>%
   summarise("Hindu" = sum(Hindus) / sum(Population),
             "Muslim" = sum(Muslims) / sum(Population),
             "Christian" = sum(Christians) / sum(Population),
@@ -15,17 +17,25 @@ religion_table <- census_df %>%
             "Other" = sum(Others_Religions) / sum(Population)
             )
 
-religion_df <- t(religion_table)
-
-row_names <- rownames(religion_df)
-row_values <- religion_df[row_names, ]
-
-df <- data.frame(
+# Manipulating the table to make it suitable to create
+# the pie chart.
+religion_transpose_df <- t(religion_table)
+row_names <- rownames(religion_transpose_df)
+row_values <- religion_transpose_df[row_names, ]
+india_religion_df <- data.frame(
   group = row_names,
   value = row_values
 )
 
-pie <- plot_ly(df, labels = ~group, values = ~value, type = 'pie') %>%
+# Code to create the pie chart.
+pie_chart_religion_dis <- plot_ly(india_religion_df,
+                                  labels = ~group,
+                                  values = ~value,
+                                  type = "pie") %>%
   layout(title = "India's religious percentages",
-         xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
-         yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))
+         xaxis = list(showgrid = FALSE,
+                      zeroline = FALSE,
+                      showticklabels = FALSE),
+         yaxis = list(showgrid = FALSE,
+                      zeroline = FALSE,
+                      showticklabels = FALSE))
