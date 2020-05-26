@@ -14,7 +14,7 @@ districts_of_delhi <- india_census_df %>%
 
 #Drawing the plot for males
 male_plot <- ggplot(data = temp2, aes(x = District.name, y = Male)) +
-            geom_point()
+            geom_point() + geom_line()
 
 #Drawing the plot for females
 female_plot <- ggplot(data = temp2, aes(x = District.name, y = Female)) +
