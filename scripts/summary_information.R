@@ -1,3 +1,6 @@
+# This R file will show some summary information about
+# the country India's census data: about the population.
+
 # Set up: Reading dataset file
 india_census_df <- read.csv("data/india-districts-census-2011.csv",
                             stringsAsFactors = FALSE)
@@ -41,7 +44,7 @@ computer_internet_diff_df <- india_census_df %>%
   mutate(all_households_with_comp_no_inter =
            Households_with_Computer - Households_with_Internet)
 
-district_max_comp_without_inter <- computer_internet_diff_df %>%
+dist_max_comp_without_inter <- computer_internet_diff_df %>%
   filter(all_households_with_comp_no_inter ==
            max(all_households_with_comp_no_inter, na.rm = TRUE)) %>%
   select(District.name) %>%
