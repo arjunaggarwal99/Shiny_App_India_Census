@@ -17,32 +17,39 @@ source("scripts/third_chart.R")
 
 ## Introductory paragraph
 > India has the second largest population in the world with a lot of diversity considering that, the purpose of the project is to learn more about the population of the country and based on a multiple factors like population, literacy rate, male:female ratio, household status and so on. Along with this, there is a vibrant distribution of the population in the country based on various geographical, political, religious and socio-economic factors that affect the patterns of distribution and the type of people that live in the different regions of the country. This project will help us explain the diversity of the place.
+>
 > The source of the data for the project is here: [Scraper Source](https://github.com/nishusharma1608/India-Census-2011-Analysis), [Data source](http://censusindia.gov.in/2011-Common/CensusData2011.html).
-> Why.. add.. how contributors are from India. 
-> what do we do with that dat: understand the duynamics of the country more.
+>
+> Since all the team members: contributors of this group were born and raised in India, we were motivated to learn more about the demographics of the Indian population.
+> With this report from the Census 2011 data, we can understand the dynamics of population of Indian with a more analytical perspective and we will be able to make a better judgement of the various notions and myths about India.
 
 ## Summary Information
-> The total population of India is **`r total_pop`** people; the state with the maximum population is **`r state_max_pop`**. In the country, the male female ratio is **`r male_female_ratio` : 1** which clearly shows how there are more males than females in the country. Along with this, the city with the lowest literacy rate is **`r city_min_literate`**. Out of all the districts in the country, the district with the maximum number of households having computers without internet is **`r dist_max_comp_without_inter`**.
+> The total population of India is **`r total_pop`** people; the state with the maximum population is **`r state_max_pop`**. In the country, for every **1 female**, there are **`r male_female_ratio` males** which clearly shows how there are more males than females in the country. Along with this, the city with the lowest literacy rate is **`r city_min_literate`**. Out of all the districts in the country, the district with the maximum number of households having computers without internet is **`r dist_max_comp_without_inter`**.
 
 ## Summary Table
->  India has a very large rural population. At the same time, over the past two decades, there has been a strong waive of urbanisation wherein people are settling in the major metropolitan cities of the country or other urban areas. This summary table will help us anaylyse the state wise urban and rural households and will also tell us about the trends of population concentration based on the urban/rural areas throughout different states.
+>  India has a very large rural population. At the same time, over the past two decades, there has been a strong waive of urbanisation wherein people are settling in the major metropolitan cities of the country or other urban areas. This summary table will help us anaylyse the state wise urban and rural households in the country India.
+>
+> The particular grouping calculation was done to make sure that combine all the value of rural, urban, and total households of all districts grouped by state in which that district is present. In this summary table, we have shown households number on state wise basis.
 >
 > Here is the summary table of the total, urban and rural households across different states in India.
 
 ```{r summary table, echo = FALSE, warning = FALSE}
-kable(summary_table)
+kable(summary_table_households, col.names = c("State",
+                                       "Number of Rural Households",
+                                       "Number of Urban Households",
+                                       "Number of Total Households"))
 ```
 
 > Interpretation from the summary table:
 >
-> 1. 
-> 2. 
+> 1. The state with the maximum number of urban households is **Uttar Pradesh** and the state with minimum number of urban households is **Lakshadweep**. It can also be seen that the number urban households is more than thrice the number of rural households in these states.
+> 2. It can be seen that more than **97%** of the households in the NCT of Delhi which is the country's capital has urban households which clearly states that people have urbanised and moved to Delhi which in itself has a smaller region than other states of India but has a big number of total households of **4605555**.
 
 ## Charts
 
 ### Chart 1:
 
-> **Purpose of the ____:** *__* 
+> **Purpose of the point line chart:** *India has a big population and the capital being the NCT of Delhi, it has seen a rapid increase in population over the years due to urbanisation (as mentiond earlier as well in the summary table). There has also been a lot of migration into NCT of Delhi. The following chart will explain the distribution of male and female population throughout the NCT of Delhi. This information will also help the readers understand the various other facts about male population dominance and so on about the region through statistical data.* 
 
 ```{r first chart, echo = FALSE, warning = FALSE}
 
@@ -55,10 +62,10 @@ kable(summary_table)
 
 ### Chart 2: ___
 
-> **Purpose of the pie chart:** *Since religion is a considered a very important concept in India, this pie chart helps us understand the distribution of different religions on a country wide scale. This chart can also help understand many other usses and concerns related to the country which are based on religion.*
+> **Purpose of the pie chart:** *Since religion is a considered a very important concept in India, this pie chart helps us understand the distribution of different religions on a country wide scale. This chart can also help understand users the concerns related to religion in India.*
 
 ```{r pie chart, echo = FALSE, warning = FALSE}
-pie
+pie_chart_religion_dis
 ```
 
 > Interpretation from the pie chart: 
