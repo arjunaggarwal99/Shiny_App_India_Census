@@ -7,12 +7,18 @@ output: html_document
 
 ```{r setup, include=FALSE, warning=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library("dplyr")
+library("knitr")
+library("tidyverse")
 library("plotly")
+library("ggplot2")
 source("scripts/summary_information.R")
 source("scripts/summary_table.R")
-#source("scripts/first_chart.R")
+source("scripts/first_chart.R")
 source("scripts/second_chart.R")
 source("scripts/third_chart.R")
+india_census_df <- read.csv("data/india-districts-census-2011.csv",
+                            stringsAsFactors = FALSE)
 ```
 
 ## Introductory paragraph
@@ -24,13 +30,7 @@ source("scripts/third_chart.R")
 > With this report from the Census 2011 data, we can understand the dynamics of population of India with a more analytical perspective and we will be able to make a better judgement of the various notions and myths about India and the capital NCT of Delhi.
 
 ## Summary Information
-> The total population of India is **`r total_pop`** people; the state with the maximum population is **`r state_max_pop`**. The relevance of the total population is to inform users of the number of people on whom the data of the census is based on. The relevance of the state with the maximum population informs the users about the maximum number of population distribution in the country in one state.
->
-> In the country, for every **1 female**, there are **`r male_female_ratio` males** which clearly shows how there are more males than females in the country. The relevance of the female and male ratio explains the distribution of the population on the basis of the gender categories and helps users understand the demographics of people in the country.
-> 
-> Along with this, the district with the lowest literacy rate is **`r district_min_literate`**. The relevance of this information is to explain the patterns of education of the country on the basis of specifications of districts by showing the district with the lowest literacy rate which also shows that this district needs more attention towards fulfiling their education needs.
-> 
-> Out of all the districts in the country, the district with the maximum number of households having computers without internet is **`r dist_max_comp_without_inter`**. The relevance of this information is to show the distribution of technological advancement in the country to understand which areas in terms of districts are most developed.
+
 
 ## Summary Table
 >  India has a very large rural population. At the same time, over the past two decades, there has been a strong waive of urbanisation wherein people are settling in the major metropolitan cities of the country or other urban areas. This summary table will help us anaylyse the state wise urban and rural households in the country India.
@@ -40,7 +40,7 @@ source("scripts/third_chart.R")
 > Here is the summary table of the total, urban and rural households across different states in India.
 
 ```{r summary table, echo = FALSE, warning = FALSE}
-kable(summary_table_households, col.names = c("State",
+kable(summary_table(india_census_df), col.names = c("State",
                                        "Number of Rural Households",
                                        "Number of Urban Households",
                                        "Number of Total Households"))
@@ -55,23 +55,23 @@ kable(summary_table_households, col.names = c("State",
 
 ### Chart 1: The Urban household
 
-> **Purpose of the point line chart:** *India has a big population and the capital being the NCT of Delhi, it has seen a rapid increase in population over the years due to urbanisation (as mentiond earlier as well in the summary table). There has also been a lot of migration into NCT of Delhi. The following chart will explain the distribution of male and female population throughout the NCT of Delhi. This information will also help the readers understand the various other facts about male population dominance and so on about the region through statistical data.* 
+> **Purpose of the point line chart:** *India has a big population and the capital being the NCT of Delhi, it has seen a rapid increase in population over the years due to urbanisation (as mentiond earlier as well in the summary table). There has also been a lot of migration into NCT of Delhi and hence increase in workforce. The following chart will explain the distribution of male and female population throughout the NCT of Delhi. This information will also help the readers understand the various other facts about male  dominance in workforce and so on about the region through statistical data.* 
 
 ```{r first chart, echo = FALSE, warning = FALSE}
-
+point_plot(india_census_df)
 ```
 
-> Interpretation from the ___:
+> Interpretation from the chart:
 >
-> 1. 
-> 2. 
+> 1. It can se seen that the district North west and the New Delhi has both less number of female workers and male workers.
+> 2. It can also be seen throughout the chart that the number of male workers are greater than the numbr of female workers through all the different districts of the NCT of Delhi.
 
 ### Chart 2: Pie chart of India's Religious percentages
 
 > **Purpose of the pie chart:** *Since religion is a considered a very important concept in India, this pie chart helps us understand the distribution of different religions on a country wide scale. This chart can also help understand users the concerns related to religion in India.*
 
 ```{r pie chart, echo = FALSE, warning = FALSE}
-pie_chart_religion_dis
+pie_chart(india_census_df)
 ```
 
 > Interpretation from the pie chart: 
@@ -84,7 +84,7 @@ pie_chart_religion_dis
 > **Purpose of the double column chart:** *The purpose of this chart is the illustrate the literacy rate different between males and females throughout the different states of the country. We are also observing the general trend of literacy in the country across different states of India.* 
 
 ```{r column chart, echo = FALSE, warning = FALSE}
-literacy_rate_plot
+group_chart(india_census_df)
 ```
 
 > Interpretation from the column chart:
