@@ -31,6 +31,16 @@ india_census_df <- read.csv("data/india-districts-census-2011.csv",
 
 ## Summary Information
 
+> The total population of India is **`r summary_info_list$total_pop`** people. The relevance of the total population is to inform users of the number of people on whom the data of the census is based on.
+>
+> Out of the total number of workers, the number of agricultural workers in the country are **`r summary_info_list$total_agr_workers`**.
+>
+> The total number of districts in India is **`r summary_info_list$length`**. The total number of districts tells the expand of divisions of the country and how the further data in this report will be also analysed. Each state has a multiple number of districts.
+>
+> In the country, for every **1 female**, there are **`r summary_info_list$male_female_ratio` males** which clearly shows how there are more males than females in the country. The relevance of the female and male ratio explains the distribution of the population on the basis of the gender categories and helps users understand the demographics of people in the country.
+> 
+> There are **`r summary_info_list$difference_male_female`** more male literates than female literate in the entire country.
+
 
 ## Summary Table
 >  India has a very large rural population. At the same time, over the past two decades, there has been a strong waive of urbanisation wherein people are settling in the major metropolitan cities of the country or other urban areas. This summary table will help us anaylyse the state wise urban and rural households in the country India.
