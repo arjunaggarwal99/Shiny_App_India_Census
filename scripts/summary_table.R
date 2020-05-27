@@ -4,10 +4,6 @@
 
 library(dplyr)
 
-# Extracting data and storing it in a variable
-india_census_df <- read.csv("data/india-districts-census-2011.csv",
-                            stringsAsFactors = FALSE)
-
 # Cretes a function that takes in the original data frame
 # as a parameter and returns the summary table
 # data frame.

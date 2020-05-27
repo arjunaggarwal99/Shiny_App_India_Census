@@ -2,11 +2,10 @@
 # for the percentage of people following different religions
 # in India
 
-# Takes the data set from the read command in our summary table file
-source("scripts/summary_table.R")
-
-
-
+# Creates a functio that takes in the required data
+# frame as a parameter and returns the pie chart.
+pie_chart <- function(india_census_df) {
+  
 # Creating a table based on different religions in India
 # and the proportion of people believing in those religions.
 religion_table <- india_census_df %>%
@@ -29,9 +28,6 @@ india_religion_df <- data.frame(
   value = row_values
 )
 
-# Creates a functio that takes in the required data
-# frame as a parameter and returns the pie chart.
-pie_chart <- function(religion_transpose_df) {
 # Code to create the pie chart.
 pie_chart_religion_dis <- plot_ly(india_religion_df,
                                   labels = ~group,
