@@ -14,6 +14,7 @@ male_fem_delhi_workers <- india_census_df %>%
   select(Male_Workers, Female_Workers, District.name)
 
 #Plotting the relation
+point_plot <- function(male_fem_delhi_workers) {
 male_and_female_plot <- ggplot(male_fem_delhi_workers,
 aes(Male_Workers, Female_Workers, color = District.name)) +
 geom_point() +
@@ -23,3 +24,5 @@ labs(title
  = "Relation between male and female workers in districts of New Delhi",
      x = "Number of male workers",
     y = "Number of female workers")
+return(male_and_female_plot)
+}
