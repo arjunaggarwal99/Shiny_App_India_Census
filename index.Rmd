@@ -16,12 +16,12 @@ source("scripts/third_chart.R")
 ```
 
 ## Introductory paragraph
-> India has the second largest population in the world with a lot of diversity considering that, the purpose of the project is to learn more about the population of the country and based on a multiple factors like population, literacy rate, male:female ratio, household status and so on. Along with this, there is a vibrant distribution of the population in the country based on various geographical, political, religious and socio-economic factors that affect the patterns of distribution and the type of people that live in the different regions of the country. This project will help us explain the diversity of the place.
+> India has the second largest population in the world with a lot of diversity considering that, the purpose of the project is to learn more about the population of the country and different states of the country based on a multiple factors like population, literacy rate, male:female ratio, household status and so on. Along with this, there is a vibrant distribution of the population in the country based on various geographical, political, religious and socio-economic factors that affect the patterns of distribution and the type of people that live in the different regions of the country. This project will help us explain the diversity of the place.
 >
 > The source of the data for the project is here: [Scraper Source](https://github.com/nishusharma1608/India-Census-2011-Analysis), [Data source](http://censusindia.gov.in/2011-Common/CensusData2011.html).
 >
-> Since all the team members: contributors of this group were born and raised in India, we were motivated to learn more about the demographics of the Indian population.
-> With this report from the Census 2011 data, we can understand the dynamics of population of Indian with a more analytical perspective and we will be able to make a better judgement of the various notions and myths about India.
+> Since all the team members: contributors of this group were born and raised in India, we were motivated to learn more about the demographics of the Indian population. We were also motivated to further explore the NCT of Delhi as it is the capital of the country.
+> With this report from the Census 2011 data, we can understand the dynamics of population of India with a more analytical perspective and we will be able to make a better judgement of the various notions and myths about India and the capital NCT of Delhi.
 
 ## Summary Information
 > The total population of India is **`r total_pop`** people; the state with the maximum population is **`r state_max_pop`**. The relevance of the total population is to inform users of the number of people on whom the data of the census is based on. The relevance of the state with the maximum population informs the users about the maximum number of population distribution in the country in one state.
