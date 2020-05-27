@@ -8,6 +8,10 @@ library(dplyr)
 india_census_df <- read.csv("data/india-districts-census-2011.csv",
                             stringsAsFactors = FALSE)
 
+# Cretes a function that takes in the original data frame
+# as a parameter and returns the summary table
+# data frame.
+summary_table <- function(india_census_df) {
 # Creating a table grouped by state
 summary_table_households <- india_census_df %>%
   group_by(State.name) %>%
@@ -23,3 +27,5 @@ summary_table_households <- arrange(summary_table_households,
                                     rural_households,
                                     urban_households,
                                     total_households)
+return(summary_table_households)
+}
