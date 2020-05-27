@@ -5,8 +5,8 @@
 library("dplyr")
 library("ggplot2")
 
-#Reading the dataset file
-india_census_df <- read.csv(file = "data/india-districts-census-2011.csv")
+
+point_plot <- function(india_census_df) {
 
 #Creating a dataframe of male and female workers from districts of New Delhi
 male_fem_delhi_workers <- india_census_df %>%
@@ -14,7 +14,6 @@ male_fem_delhi_workers <- india_census_df %>%
   select(Male_Workers, Female_Workers, District.name)
 
 #Plotting the relation
-point_plot <- function(male_fem_delhi_workers) {
 male_and_female_plot <- ggplot(male_fem_delhi_workers,
 aes(Male_Workers, Female_Workers, color = District.name)) +
 geom_point() +

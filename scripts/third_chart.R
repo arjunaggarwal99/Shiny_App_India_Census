@@ -3,18 +3,16 @@
 library("dplyr")
 library("plotly")
 
-#Reading the dataset file
-india_census_df <- read.csv(file = "data/india-districts-census-2011.csv")
 
+#Creates a function that takes in dataframe as a parameter
+#and returns a grouped chart
+group_chart <- function(india_census_df) {
 #Grouping all the literates(male and females) from a state together
 literate_of_male_female <- india_census_df %>%
   group_by(State.name) %>%
   summarise(Male_Literate = sum(Male_Literate),
             Female_Literate = sum(Female_Literate))
 
-#Creates a function that takes in dataframe as a parameter
-#and returns a grouped chart
-group_chart <- function(literate_of_male_female) {
   literacy_rate_plot <- plot_ly(
   data = literate_of_male_female,
   x = ~State.name,
