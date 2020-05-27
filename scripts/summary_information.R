@@ -32,7 +32,7 @@ state_max_pop <- india_census_df %>%
   pull()
 
 ## District with Lowest number of literate people
-city_min_literate <- india_census_df %>%
+district_min_literate <- india_census_df %>%
   group_by(District.name) %>%
   summarise(literate_population = sum(Literate)) %>%
   filter(literate_population == max(literate_population, na.rm = TRUE)) %>%
