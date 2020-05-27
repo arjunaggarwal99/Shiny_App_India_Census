@@ -16,15 +16,21 @@ source("scripts/third_chart.R")
 ```
 
 ## Introductory paragraph
-> India has the second largest population in the world with a lot of diversity considering that, the purpose of the project is to learn more about the population of the country and based on a multiple factors like population, literacy rate, male:female ratio, household status and so on. Along with this, there is a vibrant distribution of the population in the country based on various geographical, political, religious and socio-economic factors that affect the patterns of distribution and the type of people that live in the different regions of the country. This project will help us explain the diversity of the place.
+> India has the second largest population in the world with a lot of diversity considering that, the purpose of the project is to learn more about the population of the country and different states of the country based on a multiple factors like population, literacy rate, male:female ratio, household status and so on. Along with this, there is a vibrant distribution of the population in the country based on various geographical, political, religious and socio-economic factors that affect the patterns of distribution and the type of people that live in the different regions of the country. This project will help us explain the diversity of the place.
 >
 > The source of the data for the project is here: [Scraper Source](https://github.com/nishusharma1608/India-Census-2011-Analysis), [Data source](http://censusindia.gov.in/2011-Common/CensusData2011.html).
 >
-> Since all the team members: contributors of this group were born and raised in India, we were motivated to learn more about the demographics of the Indian population.
-> With this report from the Census 2011 data, we can understand the dynamics of population of Indian with a more analytical perspective and we will be able to make a better judgement of the various notions and myths about India.
+> Since all the team members: contributors of this group were born and raised in India, we were motivated to learn more about the demographics of the Indian population. We were also motivated to further explore the NCT of Delhi as it is the capital of the country.
+> With this report from the Census 2011 data, we can understand the dynamics of population of India with a more analytical perspective and we will be able to make a better judgement of the various notions and myths about India and the capital NCT of Delhi.
 
 ## Summary Information
-> The total population of India is **`r total_pop`** people; the state with the maximum population is **`r state_max_pop`**. In the country, for every **1 female**, there are **`r male_female_ratio` males** which clearly shows how there are more males than females in the country. Along with this, the city with the lowest literacy rate is **`r city_min_literate`**. Out of all the districts in the country, the district with the maximum number of households having computers without internet is **`r dist_max_comp_without_inter`**.
+> The total population of India is **`r total_pop`** people; the state with the maximum population is **`r state_max_pop`**. The relevance of the total population is to inform users of the number of people on whom the data of the census is based on. The relevance of the state with the maximum population informs the users about the maximum number of population distribution in the country in one state.
+>
+> In the country, for every **1 female**, there are **`r male_female_ratio` males** which clearly shows how there are more males than females in the country. The relevance of the female and male ratio explains the distribution of the population on the basis of the gender categories and helps users understand the demographics of people in the country.
+> 
+> Along with this, the district with the lowest literacy rate is **`r district_min_literate`**. The relevance of this information is to explain the patterns of education of the country on the basis of specifications of districts by showing the district with the lowest literacy rate which also shows that this district needs more attention towards fulfiling their education needs.
+> 
+> Out of all the districts in the country, the district with the maximum number of households having computers without internet is **`r dist_max_comp_without_inter`**. The relevance of this information is to show the distribution of technological advancement in the country to understand which areas in terms of districts are most developed.
 
 ## Summary Table
 >  India has a very large rural population. At the same time, over the past two decades, there has been a strong waive of urbanisation wherein people are settling in the major metropolitan cities of the country or other urban areas. This summary table will help us anaylyse the state wise urban and rural households in the country India.
@@ -47,7 +53,7 @@ kable(summary_table_households, col.names = c("State",
 
 ## Charts
 
-### Chart 1:
+### Chart 1: The Urban household
 
 > **Purpose of the point line chart:** *India has a big population and the capital being the NCT of Delhi, it has seen a rapid increase in population over the years due to urbanisation (as mentiond earlier as well in the summary table). There has also been a lot of migration into NCT of Delhi. The following chart will explain the distribution of male and female population throughout the NCT of Delhi. This information will also help the readers understand the various other facts about male population dominance and so on about the region through statistical data.* 
 
@@ -60,7 +66,7 @@ kable(summary_table_households, col.names = c("State",
 > 1. 
 > 2. 
 
-### Chart 2: ___
+### Chart 2: Pie chart of India's Religious percentages
 
 > **Purpose of the pie chart:** *Since religion is a considered a very important concept in India, this pie chart helps us understand the distribution of different religions on a country wide scale. This chart can also help understand users the concerns related to religion in India.*
 
@@ -73,7 +79,7 @@ pie_chart_religion_dis
 > 1. It can be seen from the pie chart that the most popular religion in India is the **Hindu** as **80%** people in India associate themselves with this religion.
 > 2. The least represented religion in India is the **Jain** religion with only **0.369%** people in the country associating themselves with this religion.
 
-### Chart 3:
+### Chart 3: Double column chart of Relationship between literacy rates between males and females in different Indian states
 
 > **Purpose of the double column chart:** *The purpose of this chart is the illustrate the literacy rate different between males and females throughout the different states of the country. We are also observing the general trend of literacy in the country across different states of India.* 
 
