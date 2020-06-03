@@ -1,7 +1,17 @@
+# loading the necessary libraries and packages
 library(shiny)
 library(plotly)
 library(dplyr)
-india_census_df <- read.csv("data/india-districts-census-2011.csv")
+library(styler)
+library(lintr)
+library(ggplot2)
+
+india_census_df <- read.csv("data/india-districts-census-2011.csv",
+                            stringsAsFactors = FALSE
+)
+india_census_df_tech <- india_census_df %>%
+  rename("Computer Households" = "Households_with_Computer",
+         "Internet Households" = "Households_with_Internet")
 
 # Grouping the dataset by state names
 india_transport_by_states <- india_census_df %>%
@@ -25,11 +35,42 @@ india_transport_by_regions <- india_transport_by_states %>%
     "North", "East"
   ))
 
-# Creating the function that has two parameters:
-# input and output
+
+
+# Creating the output server function for the app
 server <- function(input, output) {
-  # Rendering the pie chart plotly of the transport
-  # distribution through different regions
+  # Redering the plotly of the bar chart for technogical advacements
+  # of districts of different Indian states.
+  output$techdistrictschart <- renderPlotly({
+    districttechplotyl <- plot_ly(
+      data = india_census_df_tech %>% filter(State.name == input$selectstate),
+      x = ~District.name,
+      y = ~ get("Households"),
+      type = "bar",
+      name = "Total Households",
+      width = 850,
+      height = 400
+    ) %>%
+      layout(
+        title = paste0("The number of households with coumputer and",
+                       "internet in different districts of ",
+                       input$selectstate),
+        xaxis = list(title = "Names of Districts"),
+        yaxis = list(title = "Number of Households"),
+        barmode = "group"
+      )
+    # Adding trace of the checkBox widget of different technology options
+    for (trace in input$technologyoption) {
+      districttechplotyl <- districttechplotyl %>%
+        add_trace(
+          y = as.formula(paste0("~`", trace, "`")),
+          name = trace
+        )
+    }
+    # displays the created plot
+    return(districttechplotyl)
+  })
+  
   output$regionstransportchart <- renderPlotly({
     # Defining the plotly chart to be printed
     transportpiechart <- plot_ly(
