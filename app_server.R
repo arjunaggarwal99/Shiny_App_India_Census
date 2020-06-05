@@ -4,38 +4,7 @@ library(plotly)
 library(dplyr)
 library(styler)
 library(lintr)
-library(ggplot2)
-
-india_census_df <- read.csv("data/india-districts-census-2011.csv",
-                            stringsAsFactors = FALSE
-)
-india_census_df_tech <- india_census_df %>%
-  rename("Computer Households" = "Households_with_Computer",
-         "Internet Households" = "Households_with_Internet")
-
-# Grouping the dataset by state names
-india_transport_by_states <- india_census_df %>%
-  group_by(State.name) %>%
-  summarise(
-    Total_Households = sum(Households),
-    "Bicycle Households" = sum(Households_with_Bicycle),
-    "Car, Jeep, Van Households" = sum(Households_with_Car_Jeep_Van),
-    "Scooter, Motorcycle, Moped Households" =
-      sum(Households_with_Scooter_Motorcycle_Moped)
-  )
-
-# Grouping the dataset by regions(North, South, East, West, Northeast, Central)
-india_transport_by_regions <- india_transport_by_states %>%
-  mutate("Region" = c(
-    "West", "South", "Northeast", "Northeast", "East", "North", "Central",
-    "West", "West", "West", "West", "North", "North", "North",
-    "East", "South", "South", "South", "Central", "West", "Northeast",
-    "Northeast", "Northeast", "Northeast", "North", "East", "South",
-    "North", "North", "Northeast", "South", "Northeast", "North",
-    "North", "East"
-  ))
-
-
+source("analysis.R")
 
 # Creating the output server function for the app
 server <- function(input, output) {
@@ -52,9 +21,11 @@ server <- function(input, output) {
       height = 400
     ) %>%
       layout(
-        title = paste0("The number of households with coumputer and",
-                       "internet in different districts of ",
-                       input$selectstate),
+        title = paste0(
+          "The number of households with computer and ",
+          "internet in different districts of ",
+          input$selectstate
+        ),
         xaxis = list(title = "Names of Districts"),
         yaxis = list(title = "Number of Households"),
         barmode = "group"
@@ -70,7 +41,6 @@ server <- function(input, output) {
     # displays the created plot
     return(districttechplotyl)
   })
-  
   output$regionstransportchart <- renderPlotly({
     # Defining the plotly chart to be printed
     transportpiechart <- plot_ly(
@@ -96,5 +66,34 @@ server <- function(input, output) {
       )
     # Returning the above made plotly chart
     return(transportpiechart)
+  })
+  output$title_name_bar <- renderText({
+    return(input$title_name_bar)
+  })
+  output$chart_1 <- renderPlotly({
+    household_plot <- plot_ly(
+      data = india_urban_rural_house_df %>%
+        select(
+          "Total Households", "Rural Households",
+          "Urban Households", input$categorytype
+        ),
+      x = ~ get(input$categorytype),
+      y = ~ get("Total Households"),
+      type = "bar",
+      name = "No. of Total Households",
+      width = 850,
+      height = 450
+    ) %>%
+      add_trace(
+        y = ~ get(input$type_of_household),
+        name = paste0("No. of ", gsub("_", " ", input$type_of_household))
+      ) %>%
+      layout(
+        title = paste(input$title_name_bar),
+        xaxis = list(title = "Name of state"),
+        yaxis = list(title = "Number of households"),
+        barmode = "group"
+      )
+    return(household_plot)
   })
 }
