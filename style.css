@@ -1,0 +1,42 @@
+h2 {
+  color : navy;
+}
+
+h4 {
+  background-color : LemonChiffon;
+  color : Tomato;
+}
+
+h3 {
+  background-color: LightCyan;
+  border : 1px solid IndianRed;
+}
+
+h5 {
+  font-family: 'BentonSans Book' ;
+  color: teal;
+}
+
+#message_1 {
+    font-family: 'Helvetica' ;
+      line-height: 1.6;
+    font-weight: 500;
+  color : orange;
+    background-color: black;
+}
+
+#message_2 {
+    font-family: 'Helvetica' ;
+      line-height: 1.6;
+    font-weight: 500;
+  color : white;
+  background-color: black;
+}
+
+#message_3 { 
+  font-family: 'Helvetica' ;
+    line-height: 1.6;
+    font-weight: 500;
+  color : LawnGreen;
+    background-color: black;
+}

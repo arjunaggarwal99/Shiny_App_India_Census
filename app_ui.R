@@ -25,7 +25,8 @@ overview_tab <- tabPanel(
         "Urban and Rural households in India", height = 300, width = 320
     ),
     h4("About the dataset"),
-    p(paste0(
+    tags$p(id = "message_1",
+      paste0(
       "Every 10 years, the government of India conducts a ",
       "a National Census project wherein they collect information ",
       "about the population of the country based on several factors. ",
@@ -33,13 +34,14 @@ overview_tab <- tabPanel(
       "which illustrates the information about population, households ",
       "of different Indian states and districts."
     )),
-    p(
+    tags$p(id = "message_2",
       "Considering that India has the second largest population ",
       "in the world, its population is distributed in a ",
       "manner which makes it interesting to study the data ",
       "about it population."
     ),
-    p(paste0(
+    tags$p(id = "message_3",
+      paste0(
       "Along with this, there is a vibrant ",
       "distribution of the households in the country based ",
       "on various geographical, resource availibility and ",
@@ -411,7 +413,8 @@ summary_tab <- tabPanel(
 
 # Combining all pages in a ui variable
 # to creat a user interface page
-ui <- navbarPage(
+ui <- fluidPage(  includeCSS("style.css"),
+                  navbarPage(
   theme = shinytheme("flatly"),
   "Households data analysis of India",
   overview_tab,
@@ -419,4 +422,5 @@ ui <- navbarPage(
   transport_tab,
   rural_urban_tab,
   summary_tab
+  )
 )
