@@ -3,13 +3,14 @@ h2 {
 }
 
 h4 {
-  background-color : LemonChiffon;
-  color : Tomato;
+  background-color : DarkSlateGray;
+  color : White;
 }
 
 h3 {
-  background-color: LightCyan;
-  border : 1px solid IndianRed;
+  background-color: DimGray;
+  border : 3px solid DarkSlateGray;
+  color : White;
 }
 
 h5 {
