@@ -70,7 +70,7 @@ server <- function(input, output) {
   output$title_name_bar <- renderText({
     return(input$title_name_bar)
   })
-  output$chart_1 <- renderPlotly({
+  output$urbanruralchart <- renderPlotly({
     household_plot <- plot_ly(
       data = india_urban_rural_house_df %>%
         select(
@@ -82,7 +82,7 @@ server <- function(input, output) {
       type = "bar",
       name = "No. of Total Households",
       width = 850,
-      height = 450
+      height = 380
     ) %>%
       add_trace(
         y = ~ get(input$type_of_household),

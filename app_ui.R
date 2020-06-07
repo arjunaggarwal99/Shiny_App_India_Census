@@ -7,9 +7,9 @@ library(lintr)
 library(ggplot2)
 library(shinythemes)
 
-india_census_df <- read.csv("data/india-districts-census-2011.csv",
-  stringsAsFactors = FALSE
-)
+# india_census_df <- read.csv("data/india-districts-census-2011.csv",
+#   stringsAsFactors = FALSE
+# )
 
 # Creating the overview: introduction page
 overview_tab <- tabPanel(
@@ -178,9 +178,6 @@ tech_tab <- tabPanel(
     # Creating main panel for data visualization and description on the page
     mainPanel(
       # Displaying the output for the chart.
-      plotlyOutput(
-        outputId = "techdistrictschart"
-      ),
       h4("Description about the bar chart above:"),
       p(
         "This column chart shows the different districts of ",
@@ -191,6 +188,9 @@ tech_tab <- tabPanel(
         "see the trends of different households' technogical advancements ",
         "in different states and districts in different ",
         "visualizations."
+      ),
+      plotlyOutput(
+        outputId = "techdistrictschart"
       ),
       h4("Analysis:"),
       p(paste0(
@@ -211,16 +211,24 @@ tech_tab <- tabPanel(
         "Another major factor is the upward surge in the ",
         "number of multinationals and tertiary sector services ",
         "in terms of IT advancement that makes Hyderabad ",
-        "acquire the title of “cyber city."
+        "acquire the title of", strong("cyber city"), "Hence ",
+        "these areas are urban because the right resources ",
+        "given to them which can be seen with more computers ",
+        "and households in these areas."
       )),
       p(paste0(
         "• Scrolling towards west, in states like Maharashtra ",
-        "there has been scattering only in the capital city- ",
-        "for example, Mumbai. It is one of the densely populated ",
-        "cities in India and holds one of the biggest trade ",
-        "centers. This brings in calls for more employment ",
+        "there has been scattering only in few cities like Thane, ",
+        "Pune, Mumbai suburban. These is one of the densely populated ",
+        "cities in India and also holds trade centers. As the government ",
+        "provided more resources to the areas, there is more skilled employment ",
         "which in turn families draw interests in buying ",
-        "computers and indeed, more access to internet"
+        "computers and indeed, more access to internet. However, other ",
+        "districts in the state of Maharashtra are not the same as they ",
+        "lack resources of investment in employment and hence people ",
+        "cannot afford ",
+        "to buy technology like internet and computer which can be seen ",
+        "in the chart above."
       ))
     )
   )
@@ -271,7 +279,6 @@ transport_tab <- tabPanel(
     # displaying the plot in the main panel
     mainPanel(
       # Displaying the title name that was input in the side bar panel.
-      plotlyOutput("regionstransportchart"),
       h4("Description about the pie chart above:"),
       p(paste0(
         "The pie chart above shows the distribution of types ",
@@ -282,6 +289,7 @@ transport_tab <- tabPanel(
         "be shown on the basis of type of vehicles in the ",
         "different states within that region."
       )),
+      plotlyOutput("regionstransportchart"),
       h4("Analysis:"),
       p(paste0(
         "The road transport in India is considered on the ",
@@ -356,11 +364,59 @@ rural_urban_tab <- tabPanel(
     ),
     # displaying the plot in the main panel
     mainPanel(
+      h4("Description of the chart"),
+      p(paste0("This Bar chart plots talks about the number of Rural/Urban ",
+               "Households on the basis of the States and regions in India. ",
+               "Also, you can add your own customized title for the graph.")),
       # Displaying the title name that was input in the side bar panel.
-      plotlyOutput("chart_1"),
-      h6("This Bar chart plots the number of Rural/Urban
-      Households on the basis of the States in India.
-      Also, you can add your own customized title for the graph."),
+      plotlyOutput("urbanruralchart"),
+      h4("Analysis"),
+      p(paste0("There has been a great dichotomy India when ",
+               "it comes to dividing it in terms of Urban and ",
+               "Rural. The Urban India has been often seen as the ",
+               "modern, fast growing part while the Rural India is ",
+               "still deemed as backwards. Agriculture is one of ",
+               "the main occupations amongst rural households in ",
+               "India and it is the only source of income of ",
+               "the rural population of India.")),
+      p(paste0("•  If we consider the regional distribution of ",
+              "urban and rural households, apart from the South ",
+              "and West regions which have a more equal distrubution ",
+              "of urban and rural households, the rest of the ",
+              "regions have a great disparity in the number of ",
+              "urban and rural households. Agriculture plays a ",
+              "vital role in rural households exhistence. The ",
+              "dark side of these areas is that job employment ",
+              "is not secure here which in turn opens up large ",
+              "platforms for unemployment. With unemployment, ",
+              "people self employ themselves with agriculture ",
+              "leading to less earnings and more scope for rural ",
+              "households. Hence, the government and investors ",
+              "should plan for more equitable regional distribution ",
+              "of employment skilled opportunities to promote urabn ",
+              "households living throughout all regions of the country. ",
+              "The rural households also have less better transport and ",
+              "technological resources which continue their rural ",
+              "household state."
+      )),
+      p(paste0("•	 If we consider the state wise distribution, we can ",
+               "see that in some states which are the center points of ",
+               "of different regions of the country have much more urban ",
+               "households than rural households. For example, in the ",
+               "states of ", strong("Delhi in North region, Assam in ",
+                                    "Northeast region and Bihar in East region "),
+               " have a high difference in the urban and rurual households ",
+               "number. In states like these, the industry and the evolution ",
+               "of IT sector has shown much better growth over years leading ",
+               "to better employment opportunities, pay scales and in turn, ",
+               "development of more urban areas. This calls in a scope for more ",
+               "IT industries to spread across the different states within ",
+               "different regions of the country so that people are able to ",
+               "urbanise and advance themselves more equally. It can be also ",
+               "be seen that these states have a good amount of households ",
+               "which can afford modern and expensive transport, internet and ",
+               "computer facilities which leads to good education and more ",
+               "better income which makes these households urban."))
     )
   )
 )
@@ -388,11 +444,13 @@ summary_tab <- tabPanel(
       )),
       p(paste0(
         "It can be seen from charts one and two that most of ",
-        "the resources in every state are directed towards ",
+        "the resources in every state, region are directed towards ",
         "one or two major districts. These major districts are ",
         "generally inclusive of the capital cities of every state.",
         "This shows how the resources distribution is biased and ",
-        "and imbalanced within the state and the regions of India."
+        "and imbalanced within the state and the regions of India. ",
+        "Hence, we conclude that their is not equal distribution of ",
+        "resources and their is consolidation of resources to some areas."
       )),
       h4("Takeaway 2"),
       strong(paste0(
@@ -400,6 +458,22 @@ summary_tab <- tabPanel(
         "resources in their households and have a scope of development?",
         "and more investment by foreign and government sectors?"
       )),
+      p(paste0("As talked about a little in the previous analysis, other ",
+               "than the popular states and districts in the regions, all ",
+               "of the other states and districts are in need of more",
+               "resources. There is surely a need of more fair distribution. ",
+               "of resources. ",
+               "It can be seen that most of the rural households also ",
+               "don't have amenties like computer and motor based vehicles which ",
+               "gives them less opportunity to grow further and urbanise ",
+               "themselves which makes them more rural and farther from ",
+               "an opportunity to urbanise themselves. ",
+               "If the government direct there resources to these areas which ",
+               "have a lack of resources then things could be changed. ",
+               "Also, if the external investors identiy and tap into these ",
+               "potential, rural areas, then rural households could ",
+               "urbanise as well when they are given right resources."
+               )),
       h4("Takeaway 3"),
       strong(paste0(
         "How is the urban and rural population divided in the ",
@@ -407,6 +481,16 @@ summary_tab <- tabPanel(
         "What does this show in terms of resource distribution by the government ",
         "within these regions?"
       )),
+      p(paste0("Since India is still in a developing country, the rural ",
+               "households represent the majority of the total households ",
+               "in the country. Whenever ",
+               "any new investment is done, its done in areas which are ",
+               "already developed or are ahead in development, there ",
+               "is no new resources directed towards rurul areas. ",
+               "This is causing a high difference in the number of ",
+               "rural and urban households amongst regions and states ",
+               "and within region and states. The dispartities in number ",
+               "of rural and urban households can be seen increasing.")),
     )
   )
 )
