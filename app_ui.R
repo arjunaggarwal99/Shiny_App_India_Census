@@ -7,10 +7,6 @@ library(lintr)
 library(ggplot2)
 library(shinythemes)
 
-# india_census_df <- read.csv("data/india-districts-census-2011.csv",
-#   stringsAsFactors = FALSE
-# )
-
 # Creating the overview: introduction page
 overview_tab <- tabPanel(
   "Overview",
@@ -221,7 +217,8 @@ tech_tab <- tabPanel(
         "there has been scattering only in few cities like Thane, ",
         "Pune, Mumbai suburban. These is one of the densely populated ",
         "cities in India and also holds trade centers. As the government ",
-        "provided more resources to the areas, there is more skilled employment ",
+        "provided more resources to the areas,
+         there is more skilled employment ",
         "which in turn families draw interests in buying ",
         "computers and indeed, more access to internet. However, other ",
         "districts in the state of Maharashtra are not the same as they ",
@@ -404,12 +401,14 @@ rural_urban_tab <- tabPanel(
                "of different regions of the country have much more urban ",
                "households than rural households. For example, in the ",
                "states of ", strong("Delhi in North region, Assam in ",
-                                    "Northeast region and Bihar in East region "),
+                                    "Northeast region and Bihar
+                                     in East region "),
                " have a high difference in the urban and rurual households ",
                "number. In states like these, the industry and the evolution ",
                "of IT sector has shown much better growth over years leading ",
                "to better employment opportunities, pay scales and in turn, ",
-               "development of more urban areas. This calls in a scope for more ",
+               "development of more urban areas.
+                This calls in a scope for more ",
                "IT industries to spread across the different states within ",
                "different regions of the country so that people are able to ",
                "urbanise and advance themselves more equally. It can be also ",
@@ -464,7 +463,8 @@ summary_tab <- tabPanel(
                "resources. There is surely a need of more fair distribution. ",
                "of resources. ",
                "It can be seen that most of the rural households also ",
-               "don't have amenties like computer and motor based vehicles which ",
+               "don't have amenties like computer and motor
+                based vehicles which ",
                "gives them less opportunity to grow further and urbanise ",
                "themselves which makes them more rural and farther from ",
                "an opportunity to urbanise themselves. ",
@@ -477,8 +477,10 @@ summary_tab <- tabPanel(
       h4("Takeaway 3"),
       strong(paste0(
         "How is the urban and rural population divided in the ",
-        "country based on households in different regions, states and districts? ",
-        "What does this show in terms of resource distribution by the government ",
+        "country based on households in different regions,
+         states and districts? ",
+        "What does this show in terms of resource
+         distribution by the government ",
         "within these regions?"
       )),
       p(paste0("Since India is still in a developing country, the rural ",
@@ -497,7 +499,7 @@ summary_tab <- tabPanel(
 
 # Combining all pages in a ui variable
 # to creat a user interface page
-ui <- fluidPage(  includeCSS("style.css"),
+ui <- fluidPage(includeCSS("style.css"),
                   navbarPage(
   theme = shinytheme("flatly"),
   "Households data analysis of India",
