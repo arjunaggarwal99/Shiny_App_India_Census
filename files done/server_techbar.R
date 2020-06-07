@@ -4,9 +4,11 @@ library(plotly)
 library(dplyr)
 library(ggplot2)
 
+#Reading the dataframe
 india_census_df <- read.csv("data/india-districts-census-2011.csv",
   stringsAsFactors = FALSE
 )
+#Renaming the columns of households with access to computer and internet
 india_census_df <- india_census_df %>%
   rename("Computer Households" = "Households_with_Computer",
          "Internet Households" = "Households_with_Internet")

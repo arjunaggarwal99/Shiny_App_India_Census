@@ -5,6 +5,7 @@ library(dplyr)
 library(styler)
 library(lintr)
 
+#Reading the dataframe
 india_census_df <- read.csv("data/india-districts-census-2011.csv",
   stringsAsFactors = FALSE
 )

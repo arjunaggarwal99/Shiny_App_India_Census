@@ -1,11 +1,14 @@
 library(shiny)
 library(plotly)
 library(dplyr)
+#Reading the dataframe
 india_census_df <- read.csv("data/india-districts-census-2011.csv")
 
+#Mutating a column that sums up rural and urban households
 india_urban_rural_house_df <- india_census_df %>%
   mutate(Total_Households = Rural_Households + Urban_Households)
 
+#Organizing states into 6 different regions
 india_urban_rural_house_df <- india_urban_rural_house_df %>%
   group_by(State.name) %>%
   summarise("Total Households" = sum(Total_Households),

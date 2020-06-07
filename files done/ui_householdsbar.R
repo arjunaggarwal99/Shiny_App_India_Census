@@ -1,6 +1,7 @@
 library(shiny)
 library(plotly)
 library(dplyr)
+#Reading the dataframe
 india_census <- read.csv("data/india-districts-census-2011.csv")
 
 # Creating the tab for the chart based on rural and urban
