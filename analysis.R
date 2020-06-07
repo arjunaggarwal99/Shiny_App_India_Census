@@ -51,7 +51,7 @@ india_transport_by_regions <- india_transport_by_states %>%
 
 ######################
 
-# Data manipulation for chart 2:
+# Data manipulation for chart 3:
 # Modfiying the dataset for the pupose of the
 # transports pie chart.
 
@@ -78,3 +78,9 @@ india_urban_rural_house_df <- india_urban_rural_house_df %>%
     "North", "North", "Northeast", "South", "Northeast", "North",
     "North", "East"
   ))
+
+# Renaming the state name column
+india_urban_rural_house_df <- india_urban_rural_house_df %>%
+  rename(
+    "State" = State.name
+  )

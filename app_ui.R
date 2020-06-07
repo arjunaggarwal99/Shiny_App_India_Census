@@ -96,6 +96,12 @@ overview_tab <- tabPanel(
       "based on their living conditions and lack of ",
       "resources."
     ),
+    h3("Domain of Interest"),
+    p(paste0(
+      "This dataset lies in the domain of census surveys and ",
+      "practices to collect information and make decisions ",
+      "based on the population of an area using analysis."
+    )),
     h3("Data Source"),
     p("The source of the data of the project is:"),
     "1. ",
@@ -344,10 +350,9 @@ rural_urban_tab <- tabPanel(
         inputId = "categorytype",
         label = h5("Select division category on the basis of:"),
         choices = list(
-          "State" = "State.name",
-          "Region"
+          "State", "Region"
         ),
-        selected = "State.name"
+        selected = "State"
       ),
       # takes in the name of the state
       radioButtons(
@@ -374,6 +379,13 @@ rural_urban_tab <- tabPanel(
       )),
       # Displaying the title name that was input in the side bar panel.
       plotlyOutput("urbanruralchart"),
+      br(),
+      br(),
+      br(),
+      br(),
+      br(),
+      br(),
+      br(),
       h4("Analysis"),
       p(paste0(
         "There has been a great dichotomy India when ",

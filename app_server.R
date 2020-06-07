@@ -82,7 +82,7 @@ server <- function(input, output) {
       type = "bar",
       name = "No. of Total Households",
       width = 850,
-      height = 380
+      height = 550
     ) %>%
       add_trace(
         y = ~ get(input$type_of_household),
@@ -90,7 +90,7 @@ server <- function(input, output) {
       ) %>%
       layout(
         title = paste(input$title_name_bar),
-        xaxis = list(title = "Name of state"),
+        xaxis = list(title = paste0("Name of ", input$categorytype)),
         yaxis = list(title = "Number of households"),
         barmode = "group"
       )
