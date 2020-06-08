@@ -2,8 +2,6 @@
 library(shiny)
 library(plotly)
 library(dplyr)
-library(styler)
-library(lintr)
 source("analysis.R")
 
 # Creating the output server function for the app

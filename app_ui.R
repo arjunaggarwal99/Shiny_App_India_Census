@@ -2,8 +2,6 @@
 library(shiny)
 library(plotly)
 library(dplyr)
-library(styler)
-library(lintr)
 library(ggplot2)
 library(shinythemes)
 
@@ -332,7 +330,7 @@ transport_tab <- tabPanel(
 )
 #Creating a separate tab for rural/urban
 rural_urban_tab <- tabPanel(
-  "Rural/Urban",
+  "Rural/Urban Households",
   titlePanel("Rural/Urban Households"),
   # Using the sidebar layout for the first page
   sidebarLayout(
