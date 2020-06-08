@@ -57,6 +57,7 @@ overview_tab <- tabPanel(
       )
     )
   ),
+  #Writing the main purpose of the project into a panel
   mainPanel(
     img(
       src = "images/housesurbanrural.png",
@@ -329,7 +330,7 @@ transport_tab <- tabPanel(
     )
   )
 )
-
+#Creating a separate tab for rural/urban
 rural_urban_tab <- tabPanel(
   "Rural/Urban",
   titlePanel("Rural/Urban Households"),
@@ -442,7 +443,7 @@ rural_urban_tab <- tabPanel(
     )
   )
 )
-
+#Creating a summary tab
 summary_tab <- tabPanel(
   "Summary",
   titlePanel(h2(paste0(
